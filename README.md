@@ -30,5 +30,5 @@ Proyectos desarrollados durante mi **especialización en Programación en Cienci
 
 ## Contacto
 
-- ✉️ arley.rativa6@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/) · 🐙 [github.com/arleyrativa6](https://github.com/arleyrativa6)
+- arley.rativa6@gmail.com
+- [LinkedIn](https://www.linkedin.com/) · [github.com/arleyrativa6](https://github.com/arleyrativa6)

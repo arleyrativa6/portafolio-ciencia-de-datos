@@ -21,8 +21,6 @@ Proyectos desarrollados durante mi **especialización en Programación en Cienci
 | 02 | [Análisis de mercado y segmentación](./02-analisis-de-mercado-r) | Estadística descriptiva, probabilidad y segmentación de clientes sobre el dataset Mall Customers. | R · dplyr · ggplot2 · fitdistrplus · cluster |
 | 03 | [Monitas Mundial (app)](./03-app-monitas-mundial) | Aplicación móvil (PWA) para controlar ventas, inventario y fiados de fichas del Mundial 2026. | JavaScript · HTML · CSS · localStorage |
 
-> 🔜 Próximamente se agregarán más proyectos de la especialización (Fatigue_LAB y análisis de obesidad en Colombia).
-
 ## Habilidades demostradas
 
 - **Análisis de datos:** limpieza, EDA, estadística descriptiva e inferencial, visualización.

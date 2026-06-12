@@ -1,0 +1,16 @@
+,tipo_python,faltantes,faltantes_%,unicos
+age,float64,0,0.0,41
+sex,float64,0,0.0,2
+cp,float64,0,0.0,4
+trestbps,float64,0,0.0,50
+chol,float64,0,0.0,152
+fbs,float64,0,0.0,2
+restecg,float64,0,0.0,3
+thalach,float64,0,0.0,91
+exang,float64,0,0.0,2
+oldpeak,float64,0,0.0,40
+slope,float64,0,0.0,3
+ca,float64,4,1.32,4
+thal,float64,2,0.66,3
+num,int64,0,0.0,5
+disease,int32,0,0.0,2

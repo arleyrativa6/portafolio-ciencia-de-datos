@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Monitas" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <title>Monitas Mundial</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="topbar-title" id="topbar-title">Inicio</div>
+      <div class="topbar-sub" id="topbar-sub"></div>
+    </header>
+
+    <!-- Views -->
+    <main id="main">
+      <!-- INICIO -->
+      <section class="view" id="view-inicio">
+        <div class="card hero">
+          <div class="hero-row">
+            <div class="hero-stat">
+              <div class="hero-num" id="kpi-cajas">0</div>
+              <div class="hero-lbl">Cajas</div>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-num" id="kpi-sobres">0</div>
+              <div class="hero-lbl">Sobres sueltos</div>
+            </div>
+            <div class="hero-divider hidden" id="kpi-albumes-row-div"></div>
+            <div class="hero-stat hidden" id="kpi-albumes-row">
+              <div class="hero-num" id="kpi-albumes">0</div>
+              <div class="hero-lbl">Álbumes</div>
+            </div>
+          </div>
+          <div class="hero-foot">
+            <span id="kpi-total-sobres">0</span> sobres totales · <span id="kpi-fichas">0</span> fichas
+          </div>
+          <button class="btn btn-secondary" id="btn-abrir-caja">📦 Abrir una caja</button>
+          <button class="btn btn-secondary" id="btn-add-gasto-home">💸 Registrar gasto</button>
+        </div>
+
+        <h3 class="section-title">Hoy</h3>
+        <div class="grid-2">
+          <div class="card stat">
+            <div class="stat-lbl">Vendido</div>
+            <div class="stat-num" id="hoy-vendido">$0</div>
+          </div>
+          <div class="card stat">
+            <div class="stat-lbl">Ganancia</div>
+            <div class="stat-num accent-green" id="hoy-ganancia">$0</div>
+          </div>
+          <div class="card stat">
+            <div class="stat-lbl">Cajas</div>
+            <div class="stat-num" id="hoy-cajas">0</div>
+          </div>
+          <div class="card stat">
+            <div class="stat-lbl">Sobres</div>
+            <div class="stat-num" id="hoy-sobres">0</div>
+          </div>
+        </div>
+
+        <h3 class="section-title">Resumen</h3>
+        <div class="card list-card">
+          <div class="row">
+            <span>Esta semana</span>
+            <span class="row-val" id="resumen-semana">$0</span>
+          </div>
+          <div class="row">
+            <span>Este mes</span>
+            <span class="row-val" id="resumen-mes">$0</span>
+          </div>
+          <div class="row">
+            <span>Total histórico</span>
+            <span class="row-val" id="resumen-total">$0</span>
+          </div>
+          <div class="row warn" id="row-fiados">
+            <span>Fiado pendiente</span>
+            <span class="row-val" id="resumen-fiado">$0</span>
+          </div>
+          <div class="row">
+            <span>Gastos del mes</span>
+            <span class="row-val accent-red" id="resumen-gastos">$0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- VENDER -->
+      <section class="view hidden" id="view-vender">
+        <div class="card">
+          <label class="lbl">¿Qué vendiste?</label>
+          <div class="qty-row">
+            <div class="qty-block">
+              <div class="qty-lbl">Cajas</div>
+              <div class="qty-ctrl">
+                <button class="qty-btn" data-qty="cajas" data-delta="-1">−</button>
+                <input type="number" id="qty-cajas" value="0" min="0" inputmode="numeric" />
+                <button class="qty-btn" data-qty="cajas" data-delta="1">+</button>
+              </div>
+            </div>
+            <div class="qty-block">
+              <div class="qty-lbl">Sobres</div>
+              <div class="qty-ctrl">
+                <button class="qty-btn" data-qty="sobres" data-delta="-1">−</button>
+                <input type="number" id="qty-sobres" value="0" min="0" inputmode="numeric" />
+                <button class="qty-btn" data-qty="sobres" data-delta="1">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="hidden album-section" id="qty-album-block" style="margin-top:10px;">
+            <div class="qty-block">
+              <div class="qty-lbl">Álbumes</div>
+              <div class="qty-ctrl">
+                <button class="qty-btn" data-qty="albumes" data-delta="-1">−</button>
+                <input type="number" id="qty-albumes" value="0" min="0" inputmode="numeric" />
+                <button class="qty-btn" data-qty="albumes" data-delta="1">+</button>
+              </div>
+            </div>
+            <div class="qty-row" style="margin-top:10px;">
+              <div>
+                <label class="lbl" style="margin-top:0;">Precio venta c/u</label>
+                <input type="number" id="precio-album" inputmode="numeric" placeholder="0" />
+              </div>
+              <div>
+                <label class="lbl" style="margin-top:0;">Costo c/u</label>
+                <input type="number" id="costo-album" inputmode="numeric" placeholder="0" />
+              </div>
+            </div>
+            <p class="muted small" style="margin:6px 4px 0;">Cada álbum puede tener precios distintos (pasta dura, blanda, etc.).</p>
+          </div>
+
+          <div class="total-preview">
+            <span>Total</span>
+            <strong id="venta-total">$0</strong>
+          </div>
+
+          <button type="button" class="link-btn" id="btn-toggle-precios">✏️ Editar precios de esta venta</button>
+          <div id="precios-edit" class="hidden precios-edit">
+            <div class="qty-row">
+              <div>
+                <label class="lbl">Precio caja</label>
+                <input type="number" id="precio-caja" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="lbl">Precio sobre</label>
+                <input type="number" id="precio-sobre" inputmode="numeric" />
+              </div>
+            </div>
+            <p class="muted small" style="margin:8px 4px 0;">Solo afecta esta venta. Para cambiar el precio por defecto, ve a "Más".</p>
+          </div>
+
+          <label class="lbl">Método de pago</label>
+          <div class="pill-group" id="pago-group">
+            <button class="pill active" data-pago="efectivo">Efectivo</button>
+            <button class="pill" data-pago="nequi">Nequi</button>
+            <button class="pill" data-pago="daviplata">Daviplata</button>
+            <button class="pill" data-pago="bancolombia">Bancolombia</button>
+            <button class="pill" data-pago="bre-b">Bre-B</button>
+            <button class="pill" data-pago="fiado">Fiado</button>
+          </div>
+
+          <div id="fiado-fields" class="hidden">
+            <label class="lbl">Cliente <span class="muted">(nombre o teléfono)</span></label>
+            <input type="text" id="venta-cliente" placeholder="Ej: Juan / 3001234567" />
+            <label class="lbl">Abono inicial <span class="muted">(opcional)</span></label>
+            <input type="number" id="venta-abono" placeholder="0" inputmode="numeric" />
+          </div>
+
+          <label class="lbl">Notas <span class="muted">(opcional)</span></label>
+          <input type="text" id="venta-notas" placeholder="Ej: vecino del 3er piso" />
+
+          <button class="btn btn-primary" id="btn-guardar-venta">Guardar venta</button>
+        </div>
+      </section>
+
+      <!-- HISTORIAL -->
+      <section class="view hidden" id="view-historial">
+        <div class="filter-bar">
+          <button class="chip active" data-filter="todos">Todos</button>
+          <button class="chip" data-filter="hoy">Hoy</button>
+          <button class="chip" data-filter="semana">Semana</button>
+          <button class="chip" data-filter="mes">Mes</button>
+        </div>
+        <div id="historial-list"></div>
+      </section>
+
+      <!-- FIADOS -->
+      <section class="view hidden" id="view-fiados">
+        <div class="card stat fiado-summary">
+          <div class="stat-lbl">Total por cobrar</div>
+          <div class="stat-num accent-red" id="fiados-total">$0</div>
+        </div>
+        <div id="fiados-list"></div>
+      </section>
+
+      <!-- MÁS -->
+      <section class="view hidden" id="view-mas">
+        <h3 class="section-title">Reportes</h3>
+        <div class="card list-card">
+          <div class="row">
+            <span>Ventas hoy</span>
+            <span class="row-val" id="rep-hoy">$0</span>
+          </div>
+          <div class="row">
+            <span>Ventas semana</span>
+            <span class="row-val" id="rep-semana">$0</span>
+          </div>
+          <div class="row">
+            <span>Ventas mes</span>
+            <span class="row-val" id="rep-mes">$0</span>
+          </div>
+          <div class="row">
+            <span>Gastos total</span>
+            <span class="row-val accent-red" id="rep-gastos">$0</span>
+          </div>
+          <div class="row">
+            <span>Ganancia neta</span>
+            <span class="row-val accent-green" id="rep-ganancia">$0</span>
+          </div>
+          <div class="row">
+            <span>Cajas vendidas</span>
+            <span class="row-val" id="rep-cajas">0</span>
+          </div>
+          <div class="row">
+            <span>Sobres vendidos</span>
+            <span class="row-val" id="rep-sobres">0</span>
+          </div>
+          <div class="row hidden" id="rep-albumes-row">
+            <span>Álbumes vendidos</span>
+            <span class="row-val" id="rep-albumes">0</span>
+          </div>
+        </div>
+
+        <h3 class="section-title">Álbumes</h3>
+        <div class="card">
+          <label class="toggle-row">
+            <span>Vendo álbumes</span>
+            <input type="checkbox" id="cfg-vende-albumes" />
+          </label>
+          <p class="muted small" style="margin:10px 0 0;">El precio y costo de cada álbum se ingresan en el momento de cada venta o compra — así puedes tener pasta dura, pasta blanda o distintos precios sin problema.</p>
+        </div>
+
+        <h3 class="section-title">Gastos</h3>
+        <div class="card">
+          <button class="btn btn-secondary" id="btn-add-gasto">💸 Registrar gasto</button>
+          <div id="gastos-list" style="margin-top:12px;"></div>
+        </div>
+
+        <h3 class="section-title">Precios por defecto</h3>
+        <div class="card">
+          <p class="muted small">Se usan automáticamente en cada venta nueva. Puedes cambiarlos en cualquier momento.</p>
+          <label class="lbl">Precio venta caja</label>
+          <input type="number" id="cfg-precio-caja" inputmode="numeric" />
+          <label class="lbl">Precio venta sobre</label>
+          <input type="number" id="cfg-precio-sobre" inputmode="numeric" />
+          <label class="lbl">Costo de caja <span class="muted">(para calcular ganancia)</span></label>
+          <input type="number" id="cfg-costo-caja" inputmode="numeric" />
+          <button class="btn btn-secondary" id="btn-guardar-precios">Guardar precios</button>
+        </div>
+
+        <h3 class="section-title">Ajustar inventario</h3>
+        <div class="card">
+          <p class="muted small">Usa esto si compras más cajas o necesitas corregir el stock.</p>
+          <label class="lbl">Cajas</label>
+          <input type="number" id="adj-cajas" inputmode="numeric" />
+          <label class="lbl">Sobres sueltos</label>
+          <input type="number" id="adj-sobres" inputmode="numeric" />
+          <div id="adj-albumes-block" class="hidden">
+            <label class="lbl">Álbumes</label>
+            <input type="number" id="adj-albumes" inputmode="numeric" />
+          </div>
+          <button class="btn btn-secondary" id="btn-guardar-stock">Guardar inventario</button>
+        </div>
+
+        <h3 class="section-title">Datos</h3>
+        <div class="card">
+          <button class="btn btn-secondary" id="btn-exportar">📤 Exportar respaldo (JSON)</button>
+          <button class="btn btn-secondary" id="btn-importar">📥 Importar respaldo</button>
+          <input type="file" id="file-import" accept="application/json" class="hidden" />
+          <button class="btn btn-danger" id="btn-reset">🗑️ Borrar todos los datos</button>
+        </div>
+
+        <p class="footer-note">Monitas Mundial · v1.0</p>
+      </section>
+    </main>
+
+    <!-- Bottom tab bar -->
+    <nav class="tabbar">
+      <button class="tab active" data-view="inicio">
+        <span class="tab-ico">🏠</span><span class="tab-lbl">Inicio</span>
+      </button>
+      <button class="tab" data-view="vender">
+        <span class="tab-ico">💵</span><span class="tab-lbl">Vender</span>
+      </button>
+      <button class="tab" data-view="historial">
+        <span class="tab-ico">📋</span><span class="tab-lbl">Historial</span>
+      </button>
+      <button class="tab" data-view="fiados">
+        <span class="tab-ico">📒</span><span class="tab-lbl">Fiados</span>
+      </button>
+      <button class="tab" data-view="mas">
+        <span class="tab-ico">⚙️</span><span class="tab-lbl">Más</span>
+      </button>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal-backdrop hidden" id="modal-backdrop">
+      <div class="modal" id="modal">
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-actions" id="modal-actions"></div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

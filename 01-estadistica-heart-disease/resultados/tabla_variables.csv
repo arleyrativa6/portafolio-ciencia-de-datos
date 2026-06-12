@@ -1,0 +1,16 @@
+Variable,Tipo,Valores,Descripcion
+age,Cuantitativa continua,29-77,Edad del paciente en anios
+sex,Categorica nominal binaria,"0=mujer, 1=hombre",Sexo biologico reportado
+cp,Categorica nominal,"1=angina tipica, 2=angina atipica, 3=dolor no anginoso, 4=asintomatico",Tipo de dolor pectoral
+trestbps,Cuantitativa continua,94-200,"Presion arterial en reposo, mm Hg"
+chol,Cuantitativa continua,126-564,"Colesterol serico, mg/dl"
+fbs,Categorica nominal binaria,"0=falso, 1=verdadero",Azucar en ayunas > 120 mg/dl
+restecg,Categorica nominal,"0=normal, 1=ST-T anormal, 2=hipertrofia ventricular probable",Electrocardiograma en reposo
+thalach,Cuantitativa continua,71-202,Frecuencia cardiaca maxima alcanzada
+exang,Categorica nominal binaria,"0=no, 1=si",Angina inducida por ejercicio
+oldpeak,Cuantitativa continua,0-6.2,Depresion ST inducida por ejercicio
+slope,Categorica ordinal,"1=ascendente, 2=plana, 3=descendente",Pendiente del segmento ST
+ca,Cuantitativa discreta / ordinal,0-3,Vasos principales coloreados por fluoroscopia
+thal,Categorica nominal,"3=normal, 6=defecto fijo, 7=defecto reversible",Resultado thalassemia
+num,Categorica ordinal,0-4,Diagnostico original
+disease,Categorica nominal binaria,"0=sano, 1=enfermo",Objetivo binario derivado de num

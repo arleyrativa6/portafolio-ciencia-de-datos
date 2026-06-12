@@ -1,0 +1,556 @@
+{
+  "shape": [
+    303,
+    15
+  ],
+  "n": 303,
+  "n_disease": 139,
+  "n_sano": 164,
+  "duplicados": 0,
+  "faltantes_ca": 4,
+  "faltantes_thal": 2,
+  "descriptivos": [
+    {
+      "index": "age",
+      "media": 54.439,
+      "mediana": 56.0,
+      "moda": 58.0,
+      "varianza": 81.697,
+      "desv_std": 9.039,
+      "coef_variacion_%": 16.603,
+      "asimetria": -0.209,
+      "curtosis": -0.523
+    },
+    {
+      "index": "trestbps",
+      "media": 131.69,
+      "mediana": 130.0,
+      "moda": 120.0,
+      "varianza": 309.751,
+      "desv_std": 17.6,
+      "coef_variacion_%": 13.365,
+      "asimetria": 0.706,
+      "curtosis": 0.88
+    },
+    {
+      "index": "chol",
+      "media": 246.693,
+      "mediana": 241.0,
+      "moda": 197.0,
+      "varianza": 2680.849,
+      "desv_std": 51.777,
+      "coef_variacion_%": 20.988,
+      "asimetria": 1.136,
+      "curtosis": 4.492
+    },
+    {
+      "index": "thalach",
+      "media": 149.607,
+      "mediana": 153.0,
+      "moda": 162.0,
+      "varianza": 523.266,
+      "desv_std": 22.875,
+      "coef_variacion_%": 15.29,
+      "asimetria": -0.537,
+      "curtosis": -0.054
+    },
+    {
+      "index": "oldpeak",
+      "media": 1.04,
+      "mediana": 0.8,
+      "moda": 0.0,
+      "varianza": 1.348,
+      "desv_std": 1.161,
+      "coef_variacion_%": 111.684,
+      "asimetria": 1.27,
+      "curtosis": 1.576
+    },
+    {
+      "index": "ca",
+      "media": 0.672,
+      "mediana": 0.0,
+      "moda": 0.0,
+      "varianza": 0.879,
+      "desv_std": 0.937,
+      "coef_variacion_%": 139.45,
+      "asimetria": 1.189,
+      "curtosis": 0.259
+    }
+  ],
+  "contingencia_sex_disease": [
+    {
+      "sex": "0.0",
+      "0": "72",
+      "1": "25",
+      "All": "97"
+    },
+    {
+      "sex": "1.0",
+      "0": "92",
+      "1": "114",
+      "All": "206"
+    },
+    {
+      "sex": "All",
+      "0": "164",
+      "1": "139",
+      "All": "303"
+    }
+  ],
+  "contingencia_sex_disease_pct": [
+    {
+      "sex": "0.0",
+      "0": "74.23",
+      "1": "25.77"
+    },
+    {
+      "sex": "1.0",
+      "0": "44.66",
+      "1": "55.34"
+    }
+  ],
+  "top_pearson": [
+    {
+      "var1": "ca",
+      "var2": "disease",
+      "corr": 0.46,
+      "abs_corr": 0.46
+    },
+    {
+      "var1": "oldpeak",
+      "var2": "disease",
+      "corr": 0.425,
+      "abs_corr": 0.425
+    },
+    {
+      "var1": "thalach",
+      "var2": "disease",
+      "corr": -0.417,
+      "abs_corr": 0.417
+    }
+  ],
+  "top_spearman": [
+    {
+      "var1": "ca",
+      "var2": "disease",
+      "corr": 0.489,
+      "abs_corr": 0.489
+    },
+    {
+      "var1": "thalach",
+      "var2": "oldpeak",
+      "corr": -0.432,
+      "abs_corr": 0.432
+    },
+    {
+      "var1": "thalach",
+      "var2": "disease",
+      "corr": -0.423,
+      "abs_corr": 0.423
+    }
+  ],
+  "mle_normal": [
+    {
+      "variable": "age",
+      "mu_mle": 54.4389,
+      "sigma_mle": 9.0237,
+      "KS_stat": 0.0771,
+      "KS_p": 0.0518,
+      "Shapiro_stat": 0.9865,
+      "Shapiro_p": 0.0061,
+      "conclusion": "Normalidad rechazada o dudosa"
+    },
+    {
+      "variable": "thalach",
+      "mu_mle": 149.6073,
+      "sigma_mle": 22.8372,
+      "KS_stat": 0.0723,
+      "KS_p": 0.0803,
+      "Shapiro_stat": 0.9765,
+      "Shapiro_p": 0.0001,
+      "conclusion": "Normalidad rechazada o dudosa"
+    },
+    {
+      "variable": "chol",
+      "mu_mle": 246.6931,
+      "sigma_mle": 51.6914,
+      "KS_stat": 0.0554,
+      "KS_p": 0.3,
+      "Shapiro_stat": 0.9473,
+      "Shapiro_p": 0.0,
+      "conclusion": "Normalidad rechazada o dudosa"
+    }
+  ],
+  "oldpeak_ajuste": [
+    {
+      "distribucion": "gamma",
+      "parametros": "(1.7350044325449083, 0, 0.8899790790700797)",
+      "log_verosimilitud": -276.827,
+      "AIC": 557.655,
+      "BIC": 564.291
+    },
+    {
+      "distribucion": "exponencial",
+      "parametros": "(0.0, 1.5441176470588236)",
+      "log_verosimilitud": -292.628,
+      "AIC": 587.257,
+      "BIC": 590.575
+    }
+  ],
+  "oldpeak_n_positivos": 204,
+  "oldpeak_n_ceros": 99,
+  "gaussiana_mu": [
+    54.43894389438944,
+    149.6072607260726
+  ],
+  "gaussiana_Sigma": [
+    [
+      81.69741874849738,
+      -81.4230651541975
+    ],
+    [
+      -81.4230651541975,
+      523.2657749218631
+    ]
+  ],
+  "cond_thalach_age55": {
+    "mean": 149.0480887406893,
+    "sd": 21.026558016868
+  },
+  "bayes_fbs": {
+    "y": 45,
+    "n": 303,
+    "mle": 0.1485148514851485,
+    "media_posterior": 0.15161290322580645,
+    "alpha_post": 47,
+    "beta_post": 263
+  },
+  "p19": {
+    "mean_enf": 251.4748201438849,
+    "mean_sano": 242.640243902439,
+    "mean_diff": 8.834576241445887,
+    "ic_diff": [
+      -2.815017655914568,
+      20.48417013880634
+    ],
+    "t": 1.4924048025749725,
+    "df_welch": 298.63995814230174,
+    "p_one": 0.06832434421672373,
+    "p_two": 0.13664868843344746,
+    "levene_p": 0.7032231637526796,
+    "homocedasticidad": true,
+    "d_pooled": 0.170966090594108,
+    "d_glass": 0.16526639360613685,
+    "d_avg": 0.17151198600004833,
+    "d_reportada": 0.170966090594108,
+    "d_etiqueta": "d de Cohen clasica (pooled SD)"
+  },
+  "p20": {
+    "f": 17.413147285056166,
+    "p_anova": 1.9065505247705373e-10,
+    "kw": 47.31511054389604,
+    "p_kw": 2.978504887341124e-10,
+    "levene_p": 0.0620902207254142,
+    "shapiro": {
+      "1": [
+        0.9599850091741117,
+        0.46306328370091443
+      ],
+      "2": [
+        0.954446226424547,
+        0.05209465298477586
+      ],
+      "3": [
+        0.9441432372900529,
+        0.001009234309663311
+      ],
+      "4": [
+        0.9872754395194059,
+        0.2093419665153008
+      ]
+    },
+    "normalidad_ok": false,
+    "homocedasticidad_ok": true,
+    "medias_por_cp": {
+      "1": 155.95652173913044,
+      "2": 162.42,
+      "3": 155.40697674418604,
+      "4": 140.68055555555554
+    },
+    "n_por_cp": {
+      "1": 23,
+      "2": 50,
+      "3": 86,
+      "4": 144
+    }
+  },
+  "p21": {
+    "chi2": 22.042560606155472,
+    "p": 2.666712348180942e-06,
+    "dof": 1,
+    "cramer_v": 0.26971786142706666,
+    "tabla": [
+      {
+        "sex": 0,
+        "0": 72,
+        "1": 25
+      },
+      {
+        "sex": 1,
+        "0": 92,
+        "1": 114
+      }
+    ]
+  },
+  "p22": {
+    "ks_stat": 0.09590519447170165,
+    "p": 0.007068114147416629
+  },
+  "p23": {
+    "p_hat": 0.45874587458745875,
+    "y": 139,
+    "n": 303,
+    "wald": [
+      0.40263933650852773,
+      0.5148524126663898
+    ],
+    "wilson": [
+      0.40350573480931706,
+      0.515018964896895
+    ]
+  },
+  "inferencia": [
+    {
+      "pregunta": "17",
+      "analisis": "IC 90% colesterol promedio",
+      "estadistico_o_estimador": 246.69306930693068,
+      "p_valor": null,
+      "IC_inf": 241.78538743309502,
+      "IC_sup": 251.60075118076634,
+      "justificacion_metodologica": "t de Student: sigma poblacional desconocida; n=303 grande, TLC respalda inferencia.",
+      "conclusion": "Con 90% de confianza, el colesterol medio poblacional esta entre 241.79 y 251.60 mg/dl."
+    },
+    {
+      "pregunta": "17",
+      "analisis": "IC 95% colesterol promedio",
+      "estadistico_o_estimador": 246.69306930693068,
+      "p_valor": null,
+      "IC_inf": 240.83968661733462,
+      "IC_sup": 252.54645199652674,
+      "justificacion_metodologica": "t de Student: sigma poblacional desconocida; n=303 grande, TLC respalda inferencia.",
+      "conclusion": "Con 95% de confianza, el colesterol medio poblacional esta entre 240.84 y 252.55 mg/dl."
+    },
+    {
+      "pregunta": "17",
+      "analisis": "IC 99% colesterol promedio",
+      "estadistico_o_estimador": 246.69306930693068,
+      "p_valor": null,
+      "IC_inf": 238.98253480018894,
+      "IC_sup": 254.40360381367242,
+      "justificacion_metodologica": "t de Student: sigma poblacional desconocida; n=303 grande, TLC respalda inferencia.",
+      "conclusion": "Con 99% de confianza, el colesterol medio poblacional esta entre 238.98 y 254.40 mg/dl."
+    },
+    {
+      "pregunta": "18",
+      "analisis": "IC 95% varianza thalach",
+      "estadistico_o_estimador": 523.265774921863,
+      "p_valor": 6.996471280588326e-05,
+      "IC_inf": 448.8944673136318,
+      "IC_sup": 617.8875348087903,
+      "justificacion_metodologica": "IC chi-cuadrada bajo supuesto de normalidad; Shapiro p=0.0001.",
+      "conclusion": "Con 95% de confianza la varianza de thalach esta entre 448.9 y 617.9 (DE entre 21.2 y 24.9 lpm). Nota: Shapiro rechaza normalidad (p=0.000), el IC chi-cuadrada es referencial."
+    },
+    {
+      "pregunta": "19",
+      "analisis": "Welch t-test: chol enfermos > sanos (unilateral)",
+      "estadistico_o_estimador": 1.4924048025749725,
+      "p_valor": 0.06832434421672373,
+      "IC_inf": -2.815017655914568,
+      "IC_sup": 20.48417013880634,
+      "justificacion_metodologica": "Welch (equal_var=False). Levene p=0.7032. Levene p=0.7032 no rechaza homocedasticidad, por lo que la DE pooled es consistente.",
+      "conclusion": "No se rechaza H0 al 5%: no hay evidencia de que el colesterol medio de los enfermos sea mayor (diferencia=8.83 mg/dl, IC95% [-2.82, 20.48], d de Cohen clasica (pooled SD)=0.171, efecto despreciable a pequeno)."
+    },
+    {
+      "pregunta": "20",
+      "analisis": "ANOVA un factor: thalach por cp",
+      "estadistico_o_estimador": 17.413147285056166,
+      "p_valor": 1.9065505247705373e-10,
+      "IC_inf": null,
+      "IC_sup": null,
+      "justificacion_metodologica": "Shapiro por grupo (p): cp=1: 0.463, cp=2: 0.052, cp=3: 0.001, cp=4: 0.209. Levene p=0.0621. Kruskal-Wallis H=47.32, p=2.979e-10. Supuestos violados, se complementa con Kruskal-Wallis.",
+      "conclusion": "Se rechaza H0 al 5% (F=17.41, p=1.907e-10): la frecuencia cardiaca maxima media difiere entre los 4 tipos de dolor pectoral. Tukey identifica los pares que difieren (ver tabla anexa). Supuestos violados (normalidad por grupo OK=False, homocedasticidad OK=True); como respaldo no parametrico, Kruskal-Wallis H=47.32, p=2.979e-10 confirma la conclusion del ANOVA."
+    },
+    {
+      "pregunta": "21",
+      "analisis": "Chi-cuadrada sex vs disease",
+      "estadistico_o_estimador": 22.042560606155472,
+      "p_valor": 2.666712348180942e-06,
+      "IC_inf": null,
+      "IC_sup": null,
+      "justificacion_metodologica": "V de Cramer=0.270. dof=1, n=303.",
+      "conclusion": "Se rechaza H0 al 5% (chi2=22.04, p=2.667e-06): existe asociacion entre sexo y enfermedad. V de Cramer=0.270 (asociacion pequena)."
+    },
+    {
+      "pregunta": "22",
+      "analisis": "KS: age ~ N(54, 9)",
+      "estadistico_o_estimador": 0.09590519447170165,
+      "p_valor": 0.007068114147416629,
+      "IC_inf": null,
+      "IC_sup": null,
+      "justificacion_metodologica": "KS de bondad de ajuste comparado con QQ-plot.",
+      "conclusion": "Se rechaza H0 al 5%: la edad no se ajusta a Normal(54, 9) (KS=0.096, p=0.007)."
+    },
+    {
+      "pregunta": "23",
+      "analisis": "Proporcion enfermedad - IC Wald 95%",
+      "estadistico_o_estimador": 0.45874587458745875,
+      "p_valor": null,
+      "IC_inf": 0.40263933650852773,
+      "IC_sup": 0.5148524126663898,
+      "justificacion_metodologica": "IC normal de Wald; simple pero pierde cobertura cerca de los extremos.",
+      "conclusion": "IC Wald 95%: [0.4026, 0.5149]."
+    },
+    {
+      "pregunta": "23",
+      "analisis": "Proporcion enfermedad - IC Wilson 95%",
+      "estadistico_o_estimador": 0.45874587458745875,
+      "p_valor": null,
+      "IC_inf": 0.40350573480931706,
+      "IC_sup": 0.515018964896895,
+      "justificacion_metodologica": "IC Wilson; mejor cobertura, preferido en general.",
+      "conclusion": "IC Wilson 95%: [0.4035, 0.5150]. Ambos IC casi coinciden porque n=303 y p~0.46 lejos de los extremos."
+    }
+  ],
+  "p17": {
+    "mean": 246.69306930693068,
+    "sd": 51.77691754263704,
+    "n": 303,
+    "ic90": [
+      241.78538743309502,
+      251.60075118076634
+    ],
+    "ic95": [
+      240.83968661733462,
+      252.54645199652674
+    ],
+    "ic99": [
+      238.98253480018894,
+      254.40360381367242
+    ]
+  },
+  "p18": {
+    "var": 523.265774921863,
+    "ic_var": [
+      448.8944673136318,
+      617.8875348087903
+    ],
+    "ic_sd": [
+      21.187129756378795,
+      24.857343679661152
+    ],
+    "shapiro_p": 6.996471280588326e-05
+  },
+  "outliers": [
+    {
+      "variable": "age",
+      "outliers_IQR": 0,
+      "outliers_Zscore": 0
+    },
+    {
+      "variable": "trestbps",
+      "outliers_IQR": 9,
+      "outliers_Zscore": 2
+    },
+    {
+      "variable": "chol",
+      "outliers_IQR": 5,
+      "outliers_Zscore": 4
+    },
+    {
+      "variable": "thalach",
+      "outliers_IQR": 1,
+      "outliers_Zscore": 1
+    },
+    {
+      "variable": "oldpeak",
+      "outliers_IQR": 5,
+      "outliers_Zscore": 2
+    }
+  ],
+  "outliers_iso_count": 16,
+  "imputacion": [
+    {
+      "columna": "ca",
+      "faltantes": 4,
+      "media_simple_mediana": 0.6634,
+      "media_knn": 0.6845,
+      "media_iterativa": 0.6727
+    },
+    {
+      "columna": "thal",
+      "faltantes": 2,
+      "media_simple_mediana": 4.7228,
+      "media_knn": 4.7333,
+      "media_iterativa": 4.7319
+    }
+  ],
+  "shape_train_transformado": [
+    242,
+    20
+  ],
+  "shape_test_transformado": [
+    61,
+    20
+  ],
+  "n_train": 242,
+  "n_test": 61,
+  "verificacion_train_test": [
+    {
+      "index": "age",
+      "full_mean": 54.439,
+      "train_mean": 54.55,
+      "test_mean": 54.0,
+      "full_sd": 9.039,
+      "train_sd": 8.997,
+      "test_sd": 9.265
+    },
+    {
+      "index": "trestbps",
+      "full_mean": 131.69,
+      "train_mean": 130.959,
+      "test_mean": 134.59,
+      "full_sd": 17.6,
+      "train_sd": 17.623,
+      "test_sd": 17.349
+    },
+    {
+      "index": "chol",
+      "full_mean": 246.693,
+      "train_mean": 249.839,
+      "test_mean": 234.213,
+      "full_sd": 51.777,
+      "train_sd": 52.847,
+      "test_sd": 45.581
+    },
+    {
+      "index": "thalach",
+      "full_mean": 149.607,
+      "train_mean": 149.963,
+      "test_mean": 148.197,
+      "full_sd": 22.875,
+      "train_sd": 22.686,
+      "test_sd": 23.748
+    },
+    {
+      "index": "oldpeak",
+      "full_mean": 1.04,
+      "train_mean": 0.999,
+      "test_mean": 1.2,
+      "full_sd": 1.161,
+      "train_sd": 1.123,
+      "test_sd": 1.299
+    }
+  ],
+  "nan_train_post_pipeline": 0,
+  "nan_test_post_pipeline": 0
+}

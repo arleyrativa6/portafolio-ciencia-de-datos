@@ -1,0 +1,16 @@
+Variable,Tipo Python,Tipo estadistico,Escala de medicion
+age,float64,continua,razon
+sex,float64,nominal binaria,nominal
+cp,float64,nominal,nominal
+trestbps,float64,continua,razon
+chol,float64,continua,razon
+fbs,float64,nominal binaria,nominal
+restecg,float64,nominal,nominal
+thalach,float64,continua,razon
+exang,float64,nominal binaria,nominal
+oldpeak,float64,continua,razon
+slope,float64,ordinal,ordinal
+ca,float64,discreta,razon
+thal,float64,nominal,nominal
+num,int64,ordinal,ordinal
+disease,int32,nominal binaria,nominal

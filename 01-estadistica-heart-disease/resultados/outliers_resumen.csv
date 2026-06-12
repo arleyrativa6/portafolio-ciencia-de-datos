@@ -1,0 +1,6 @@
+variable,outliers_IQR,outliers_Zscore
+age,0,0
+trestbps,9,2
+chol,5,4
+thalach,1,1
+oldpeak,5,2

@@ -19,7 +19,7 @@ Proyectos desarrollados durante mi **especialización en Programación en Cienci
 |---|----------|-------------|-------------|
 | 01 | [Análisis estadístico — Heart Disease](./01-estadistica-heart-disease) | EDA completo, inferencia estadística y pipeline de preprocesamiento sobre datos clínicos cardíacos (303 pacientes). | Python · pandas · NumPy · SciPy · statsmodels · scikit-learn |
 | 02 | [Análisis de mercado y segmentación](./02-analisis-de-mercado-r) | Estadística descriptiva, probabilidad y segmentación de clientes sobre el dataset Mall Customers. | R · dplyr · ggplot2 · fitdistrplus · cluster |
-| 03 | [Monitas Mundial (app)](./03-app-monitas-mundial) | Aplicación móvil (PWA) para controlar ventas, inventario y fiados de fichas del Mundial 2026. | JavaScript · HTML · CSS · localStorage |
+| 03 | [Monitas Mundial (app)](./03-app-monitas-mundial) · [▶ Demo](https://arleyrativa6.github.io/portafolio-ciencia-de-datos/03-app-monitas-mundial/) | Aplicación móvil (PWA) para controlar ventas, inventario y fiados de fichas del Mundial 2026. | JavaScript · HTML · CSS · localStorage |
 
 ## Habilidades demostradas
 

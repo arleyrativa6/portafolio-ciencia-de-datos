@@ -1,6 +1,10 @@
 # Monitas Mundial — App de control de ventas (PWA)
 
+[![Demo en vivo](https://img.shields.io/badge/▶_Demo_en_vivo-Abrir_app-2E7D32?style=for-the-badge)](https://arleyrativa6.github.io/portafolio-ciencia-de-datos/03-app-monitas-mundial/)
+
 **Proyecto personal.** Aplicación web progresiva (PWA) instalable en el celular para llevar el control de la venta de **cajas, sobres y álbumes** de fichas del **Mundial 2026**. Pensada para un vendedor real: rápida, sin conexión y sin complicaciones.
+
+> 🔗 **Pruébala aquí:** https://arleyrativa6.github.io/portafolio-ciencia-de-datos/03-app-monitas-mundial/
 
 ## Funcionalidades
 
